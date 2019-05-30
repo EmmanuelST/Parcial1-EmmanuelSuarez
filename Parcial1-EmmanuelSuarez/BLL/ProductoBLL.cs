@@ -102,5 +102,19 @@ namespace Parcial1_EmmanuelSuarez.BLL
             return paso;
         }
 
+        public static bool Exist(int id)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+
+            if (db.Producto.Find(id) != null)
+            {
+                paso = true;
+            }
+            db.Dispose();
+
+            return paso;
+        }
+
     }
 }

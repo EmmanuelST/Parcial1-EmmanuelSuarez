@@ -1,4 +1,5 @@
-﻿using Parcial1_EmmanuelSuarez.Entidades;
+﻿using Parcial1_EmmanuelSuarez.BLL;
+using Parcial1_EmmanuelSuarez.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,14 +21,38 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            errorProvider.Clear();
-            errorProvider.SetError(IdnumericUpDown,"Este campo no es valido");
-            errorProvider.SetError(DescripciontextBox, "Este campo no es valido");
-            errorProvider.SetError(CostonumericUpDown, "Este campo no es valido");
-            errorProvider.SetError(ExistencianumericUpDown, "Este campo no es valido");
+
+            if (!Validar())
+                return;
+            Productos producto = new Productos();
+            producto = LlenarClase();
+
+            try
+            {
+                if (ProductoBLL.Exist((int)IdnumericUpDown.Value))
+                {
+                    ProductoBLL.Modificar(producto);
+                    MessageBox.Show("Modificado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if(IdnumericUpDown.Value == 0)
+                    {
+                        ProductoBLL.Guardar(producto);
+                        MessageBox.Show("Guardado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Hubo un error al intentar guardar el producto","Fallo!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            Limpiar();
         }
 
-        private bool validar()
+        private bool Validar()
         {
             bool paso = true;
             errorProvider.Clear();
@@ -78,6 +103,32 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             DescripciontextBox.Text = string.Empty;
             ExistencianumericUpDown.Value = 0;
             CostonumericUpDown.Value =0;
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ProductoBLL.Exist((int)IdnumericUpDown.Value))
+                {
+                    LlenarFormulario(ProductoBLL.Buscar((int)IdnumericUpDown.Value));
+                }else
+                {
+                    MessageBox.Show("No se encontro el producto", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch(Exception i)
+            {
+               
+               MessageBox.Show("Hubo un Problema restaurando"+i.ToString(),"Fallo!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+           
         }
     }
 }
