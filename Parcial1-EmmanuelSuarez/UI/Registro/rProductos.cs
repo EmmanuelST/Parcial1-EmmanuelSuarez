@@ -130,5 +130,42 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
 
            
         }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(IdnumericUpDown.Value > 0)
+                {
+                    ProductoBLL.Eliminar((int)IdnumericUpDown.Value);
+                    MessageBox.Show("Eliminado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }else
+                {
+                    errorProvider.Clear();
+                    errorProvider.SetError(IdnumericUpDown,"Este campo no puede ser 0");
+                }
+                Limpiar();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("algo falló al intentar eliminar ", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ExistencianumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            ValorInventariotextBox.Text = ValorInventario().ToString();
+        }
+
+        private decimal ValorInventario()
+        {
+
+            return CostonumericUpDown.Value * ExistencianumericUpDown.Value;
+        }
+
+        private void CostonumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            ValorInventariotextBox.Text = ValorInventario().ToString();
+        }
     }
 }

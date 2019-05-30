@@ -100,6 +100,7 @@
             this.ExistencianumericUpDown.Name = "ExistencianumericUpDown";
             this.ExistencianumericUpDown.Size = new System.Drawing.Size(156, 20);
             this.ExistencianumericUpDown.TabIndex = 5;
+            this.ExistencianumericUpDown.ValueChanged += new System.EventHandler(this.ExistencianumericUpDown_ValueChanged);
             // 
             // label3
             // 
@@ -122,6 +123,7 @@
             this.CostonumericUpDown.Name = "CostonumericUpDown";
             this.CostonumericUpDown.Size = new System.Drawing.Size(156, 20);
             this.CostonumericUpDown.TabIndex = 7;
+            this.CostonumericUpDown.ValueChanged += new System.EventHandler(this.CostonumericUpDown_ValueChanged);
             // 
             // label4
             // 
@@ -187,6 +189,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Buscarbutton
             // 
