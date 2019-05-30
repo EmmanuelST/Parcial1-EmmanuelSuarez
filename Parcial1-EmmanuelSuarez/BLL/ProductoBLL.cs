@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1_EmmanuelSuarez.BLL
 {
-    class ProductoBLL
+    public class ProductoBLL
     {
 
         public static bool Guardar(Productos producto)
@@ -34,5 +34,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
 
             return paso;
         }
+
+
     }
 }

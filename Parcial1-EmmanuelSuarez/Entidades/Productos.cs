@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1_EmmanuelSuarez.Entidades
 {
-    class Productos
+    public class Productos
     {
         [Key]
         public int ProductoId { get; set; }
