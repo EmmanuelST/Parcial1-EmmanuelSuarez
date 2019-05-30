@@ -16,5 +16,10 @@ namespace Parcial1_EmmanuelSuarez
         {
             InitializeComponent();
         }
+
+        private void ProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
