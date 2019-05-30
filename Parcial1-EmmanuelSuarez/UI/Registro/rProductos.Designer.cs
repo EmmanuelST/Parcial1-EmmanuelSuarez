@@ -177,11 +177,14 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(277, 17);
+            this.Buscarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.busqueda_pequeña;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(277, 14);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 31);
             this.Buscarbutton.TabIndex = 13;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             // 
             // rProductos
