@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parcial1_EmmanuelSuarez.UI.Registro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,9 @@ namespace Parcial1_EmmanuelSuarez
 
         private void ProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            rProductos rProductos = new rProductos();
+            rProductos.MdiParent = this;
+            rProductos.Show();
         }
     }
 }
