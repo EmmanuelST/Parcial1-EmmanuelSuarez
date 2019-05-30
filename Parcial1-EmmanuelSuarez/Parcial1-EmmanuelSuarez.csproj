@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -87,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Script\Script.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
