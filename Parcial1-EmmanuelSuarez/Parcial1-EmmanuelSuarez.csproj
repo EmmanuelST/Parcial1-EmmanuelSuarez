@@ -81,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Registro\rProductos.resx">
       <DependentUpon>rProductos.cs</DependentUpon>
@@ -101,6 +102,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Script\Script.sql" />
+    <None Include="Resources\nuevo_img.png" />
+    <None Include="Resources\guardar_img %281%29.png" />
+    <None Include="Resources\busqueda_pequeña.png" />
+    <None Include="Resources\buscar_img.png" />
+    <None Include="Resources\borrar_img.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
