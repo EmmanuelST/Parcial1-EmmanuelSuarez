@@ -109,5 +109,15 @@ namespace Parcial1_EmmanuelSuarez.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap recargar {
+            get {
+                object obj = ResourceManager.GetObject("recargar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

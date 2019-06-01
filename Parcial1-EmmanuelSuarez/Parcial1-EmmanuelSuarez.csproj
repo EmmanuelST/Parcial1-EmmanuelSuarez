@@ -56,6 +56,7 @@
     <Compile Include="BLL\ProductoBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\ValorTotalInventario.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consulta\cValorInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cValorInventario.Designer.cs">
+      <DependentUpon>cValorInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registro\rProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +90,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consulta\cValorInventario.resx">
+      <DependentUpon>cValorInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\rProductos.resx">
       <DependentUpon>rProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Script\Script.sql" />
+    <None Include="Resources\recargar.png" />
     <None Include="Resources\nuevo_img.png" />
     <None Include="Resources\guardar_img %281%29.png" />
     <None Include="Resources\busqueda_pequeña.png" />
