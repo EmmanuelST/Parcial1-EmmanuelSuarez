@@ -1,4 +1,6 @@
-﻿using Parcial1_EmmanuelSuarez.UI.Registro;
+﻿using Parcial1_EmmanuelSuarez.Entidades;
+using Parcial1_EmmanuelSuarez.UI.Consulta;
+using Parcial1_EmmanuelSuarez.UI.Registro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +25,13 @@ namespace Parcial1_EmmanuelSuarez
             rProductos rProductos = new rProductos();
             rProductos.MdiParent = this;
             rProductos.Show();
+        }
+
+        private void ValorTotalDeInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cValorInventario valor = new cValorInventario();
+            valor.MdiParent = this;
+            valor.Show();
         }
     }
 }

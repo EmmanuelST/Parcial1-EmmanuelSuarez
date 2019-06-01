@@ -10,12 +10,12 @@ namespace Parcial1_EmmanuelSuarez.Entidades
     class ValorTotalInventario
     {
         [Key]
-        public int IdValorInventario { get; set; }
+        public int ValorInventarioId { get; set; }
         public decimal ValorTotal { get; set; }
 
         public ValorTotalInventario()
         {
-            IdValorInventario = 0;
+            ValorInventarioId = 0;
             ValorTotal = 0;
         }
 
