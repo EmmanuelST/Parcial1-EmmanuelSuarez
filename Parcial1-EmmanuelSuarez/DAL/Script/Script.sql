@@ -8,9 +8,15 @@ create table Productos
 	ProductoId int Primary key identity,
 	Descripcion varchar(100) not null,
 	Existencia int not null,
-	Costo decimal not null
+	Costo decimal not null,
+	ValorInventario decimal
 )
 
+use Master
+drop database Parcial1_db
+
+Use Parcial1_db
+select * from Productos
 
 
 

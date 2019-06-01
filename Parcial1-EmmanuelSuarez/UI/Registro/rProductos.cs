@@ -46,7 +46,8 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             }
             catch(Exception)
             {
-                MessageBox.Show("Hubo un error al intentar guardar el producto","Fallo!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                throw;
+                //MessageBox.Show("Hubo un error al intentar guardar el producto","Fallo!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
             Limpiar();
@@ -86,6 +87,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             producto.Descripcion = DescripciontextBox.Text;
             producto.Existencia = (int)ExistencianumericUpDown.Value;
             producto.Costo = CostonumericUpDown.Value;
+            producto.ValorInventario = Convert.ToDecimal(ValorInventariotextBox.Text);
 
             return producto;
         }

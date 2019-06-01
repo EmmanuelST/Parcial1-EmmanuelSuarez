@@ -14,6 +14,7 @@ namespace Parcial1_EmmanuelSuarez.Entidades
         public string Descripcion { get; set; }
         public int Existencia { get; set; }
         public decimal Costo { get; set; }
+        public decimal ValorInventario { get; set; }
         
         public Productos()
         {
@@ -21,6 +22,7 @@ namespace Parcial1_EmmanuelSuarez.Entidades
             Descripcion = string.Empty;
             Existencia = 0;
             Costo = 0;
+            ValorInventario = 0;
         }
     }
 }
