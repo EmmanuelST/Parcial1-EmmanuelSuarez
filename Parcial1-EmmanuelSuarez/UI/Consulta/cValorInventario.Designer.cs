@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cValorInventario));
             this.label1 = new System.Windows.Forms.Label();
             this.ValorTotaltextBox = new System.Windows.Forms.TextBox();
             this.Refreshbutton = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             // 
             this.ValorTotaltextBox.Location = new System.Drawing.Point(12, 44);
             this.ValorTotaltextBox.Name = "ValorTotaltextBox";
+            this.ValorTotaltextBox.ReadOnly = true;
             this.ValorTotaltextBox.Size = new System.Drawing.Size(164, 20);
             this.ValorTotaltextBox.TabIndex = 1;
             // 
@@ -67,8 +69,12 @@
             this.Controls.Add(this.Refreshbutton);
             this.Controls.Add(this.ValorTotaltextBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(255, 119);
+            this.MinimumSize = new System.Drawing.Size(255, 119);
             this.Name = "cValorInventario";
-            this.Text = "cValorInventario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Valor total de inventario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

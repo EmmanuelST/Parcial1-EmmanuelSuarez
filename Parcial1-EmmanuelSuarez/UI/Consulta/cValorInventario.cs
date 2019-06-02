@@ -17,42 +17,38 @@ namespace Parcial1_EmmanuelSuarez.UI.Consulta
         public cValorInventario()
         {
             InitializeComponent();
+            OptenerTotal();
         }
 
         private void Refreshbutton_Click(object sender, EventArgs e)
         {
-            /* ValorTotalInventario valor = new ValorTotalInventario()
-             { ValorInventarioId = 0,ValorTotal = 0 };
 
-             try
-             {
-                 ValorTotalInventarioBLL.Guardar(valor);
+            OptenerTotal();
+            
+        }
 
-             }catch(Exception)
-             {
-                 throw;
-             }*/
-
+        private void OptenerTotal()
+        {
             List<Productos> lista = new List<Productos>();
 
             try
             {
-                lista = ProductoBLL.GetList(p=> true);
-            }catch(Exception)
-            {
-                throw;
+                lista = ProductoBLL.GetList(p => true);
+                decimal total = 0;
+
+                foreach (var obj in lista)
+                {
+                    total += obj.ValorInventario;
+                }
+
+                ValorTotalInventarioBLL.ModificarValor(total);
+
+                ValorTotaltextBox.Text = ValorTotalInventarioBLL.Buscar().ValorTotal.ToString();
             }
-
-            decimal total = 0;
-
-            foreach(var obj in lista)
+            catch (Exception)
             {
-                total += obj.ValorInventario;
+                MessageBox.Show("Hubo un error opteniendo la información");
             }
-
-            ValorTotalInventarioBLL.ModificarValor(total);
-
-            ValorTotaltextBox.Text =  ValorTotalInventarioBLL.Buscar().ValorTotal.ToString();
 
         }
     }
