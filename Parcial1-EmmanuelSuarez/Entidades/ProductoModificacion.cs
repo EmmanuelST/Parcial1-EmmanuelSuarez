@@ -15,7 +15,7 @@ namespace Parcial1_EmmanuelSuarez.Entidades
         public string Descripcion { get; set; }
         public DateTime FechaModificacion { get; set; }
 
-        ProductoModificacion()
+        public ProductoModificacion()
         {
             ModificacionId = 0;
             ProductoId = 0;

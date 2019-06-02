@@ -3,6 +3,7 @@ using Parcial1_EmmanuelSuarez.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +34,26 @@ namespace Parcial1_EmmanuelSuarez.BLL
             }
             return paso;
         }
-        
-      
+
+        public static List<ProductoModificacion> GetList(Expression<Func<ProductoModificacion, bool>> producto)
+        {
+            List<ProductoModificacion> Lista = new List<ProductoModificacion>();
+            Contexto db = new Contexto();
+            try
+            {
+                Lista = db.ProductoModificacion.Where(producto).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+            return Lista;
+        }
+
+
     }
 }

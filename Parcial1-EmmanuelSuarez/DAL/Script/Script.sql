@@ -13,6 +13,7 @@ create table Productos
 )
 
 use Master
+go
 drop database Parcial1_db
 
 Use Parcial1_db

@@ -33,6 +33,10 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                 if (ProductoBLL.Exist((int)IdnumericUpDown.Value))
                 {
                     ProductoBLL.Modificar(producto);
+               
+                    ProductoModificacionBLL.Guardar(new ProductoModificacion()
+                    { ProductoId = producto.ProductoId,Descripcion = producto.Descripcion, FechaModificacion = DateTime.Now });
+
                     MessageBox.Show("Modificado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
                 }
