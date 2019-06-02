@@ -58,9 +58,9 @@ namespace Parcial1_EmmanuelSuarez.BLL
             return paso;
         }
 
-        public static bool ModificarValor(decimal total)
+        public static void ModificarValor(decimal total)
         {
-            bool paso = false;
+            
             ValorTotalInventario valor = new ValorTotalInventario()
             { ValorInventarioId = 1,ValorTotal = total };
 
@@ -69,7 +69,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
             try
             {
                 db.Entry(valor).State = EntityState.Modified;
-                paso = db.SaveChanges() > 0;
+                db.SaveChanges();
 
             }catch(Exception)
             {
@@ -80,7 +80,6 @@ namespace Parcial1_EmmanuelSuarez.BLL
                 db.Dispose();
             }
 
-            return paso;
         }
         public static List<ValorTotalInventario> GetList(Expression<Func<ValorTotalInventario, bool>> valor)
         {

@@ -24,6 +24,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
 
             if (!Validar())
                 return;
+
             Productos producto = new Productos();
             producto = LlenarClase();
 
@@ -33,6 +34,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                 {
                     ProductoBLL.Modificar(producto);
                     MessageBox.Show("Modificado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
                 }
                 else
                 {
@@ -40,17 +42,23 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                     {
                         ProductoBLL.Guardar(producto);
                         MessageBox.Show("Guardado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        errorProvider.Clear();
+                        errorProvider.SetError(IdnumericUpDown,"Este campo debe ser cero");
                     }
                     
                 }
             }
             catch(Exception)
             {
-                throw;
-                //MessageBox.Show("Hubo un error al intentar guardar el producto","Fallo!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+               
+                MessageBox.Show("Hubo un error al intentar guardar el producto","Fallo!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
-            Limpiar();
+            
         }
 
         private bool Validar()
@@ -64,7 +72,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                 paso = false;
             }
 
-            if((int)CostonumericUpDown.Value < 0)
+            if((int)CostonumericUpDown.Value <= 0)
             {
                 errorProvider.SetError(CostonumericUpDown,"Este valor no puede estar en 0");
                 paso = false;
