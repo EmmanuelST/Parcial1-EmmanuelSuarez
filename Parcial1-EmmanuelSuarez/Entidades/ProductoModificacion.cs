@@ -10,12 +10,14 @@ namespace Parcial1_EmmanuelSuarez.Entidades
     class ProductoModificacion
     {
         [Key]
+        public int ModificacionId { get; set; }
         public int ProductoId { get; set; }
         public string Descripcion { get; set; }
         public DateTime FechaModificacion { get; set; }
 
         ProductoModificacion()
         {
+            ModificacionId = 0;
             ProductoId = 0;
             Descripcion = string.Empty;
             FechaModificacion = DateTime.Now;
