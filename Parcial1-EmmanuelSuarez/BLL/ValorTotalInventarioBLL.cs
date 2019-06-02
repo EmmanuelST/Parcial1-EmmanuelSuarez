@@ -15,34 +15,9 @@ namespace Parcial1_EmmanuelSuarez.BLL
     {
         
 
-        public static void Modificar()
-        {
-           /* SqlConnection sn = new SqlConnection(@"Data Source =.\SQLEXPRESS; user = sa; password =  Initial Catalog = Parcial1_db; Integrated Security = True");
-
-            string query = @"update ValorTotalInventario set ValorTotal =(select SUM(ValorTotal) from Parcial1_db.Productos)
-                            where ValorTotalId = 1;";
-
-            SqlCommand sc = new SqlCommand(query,sn);
-
-            sc.ExecuteNonQuery();
-            sn.Close();*/
-
-        }
-
         public static ValorTotalInventario Buscar()
         {
-            /*SqlConnection sn = new SqlConnection(@"Data Source =.\SQLEXPRESS; user = sa; password =  Initial Catalog = Parcial1_db; Integrated Security = True");
-            decimal valor = 0;
-            string query = @"SELECT ValorTotal FROM Parcial1.ValorTotalInventario"
-                            +"Where ValorTotalId = 1";
-
-            SqlCommand sc = new SqlCommand(query, sn);
-
-            valor = Convert.ToDecimal(sc.ExecuteScalar());
-            sn.Close();
-
-            return valor;*/
-
+           
             Contexto db = new Contexto();
             ValorTotalInventario valor = new ValorTotalInventario();
 
@@ -124,6 +99,29 @@ namespace Parcial1_EmmanuelSuarez.BLL
                 db.Dispose();
             }
             return Lista;
+        }
+
+        public static void Actualizar()
+        {
+            List<Productos> lista = new List<Productos>();
+
+            try
+            {
+                lista = ProductoBLL.GetList(p => true);
+                decimal total = 0;
+
+                foreach (var obj in lista)
+                {
+                    total += obj.ValorInventario;
+                }
+
+                ValorTotalInventarioBLL.ModificarValor(total);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
