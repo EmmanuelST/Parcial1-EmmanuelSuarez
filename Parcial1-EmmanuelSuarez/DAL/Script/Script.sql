@@ -1,26 +1,30 @@
+USE master
+GO
+CREATE DATABASE Parcial1_db
+ 
+USE Parcial1_db
+GO
 
-create database Parcial1_db
-go
-use Parcial1_db
-go
-create table Productos
+CREATE TABLE Productos
 (
-	ProductoId int Primary key identity,
-	Descripcion varchar(100) not null,
-	Existencia int not null,
-	Costo decimal not null,
-	ValorInventario decimal
+	ProductoId int PRIMARY KEY IDENTITY(1,1),
+	Descripcion nvarchar(max) NULL,
+	Existencia int NOT NULL,
+	Costo decimal(18, 2) NOT NULL,
+	ValorInventario decimal(18,2) NOT NULL 
 )
+GO
 
-use Master
-go
-drop database Parcial1_db
+CREATE TABLE ValorTotalInventarios
+(
+	ValorInventarioId int PRIMARY KEY IDENTITY(1,1),
+	ValorTotal decimal(18, 2) NOT NULL
+)
+GO
 
-Use Parcial1_db
-select * from Productos
-
-Use Parcial1_db
-SELECT ValorTotal FROM ValorTotalInventarios Where ValorInventarioId = 1
-
-update ValorTotalInventarios set ValorTotal =(select SUM(ValorTotal)
-from Parcial1_db.dbo.Productos)where ValorInventarioId = 1
+CREATE TABLE ProductoModificacions(
+	ModificacionId int PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	ProductoId int NOT NULL,
+	Descripcion nvarchar(max) NULL,
+	FechaModificacion datetime NOT NULL
+)
