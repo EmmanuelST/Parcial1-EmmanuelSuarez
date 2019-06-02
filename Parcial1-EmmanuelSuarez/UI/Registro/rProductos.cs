@@ -47,7 +47,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                     else
                     {
                         errorProvider.Clear();
-                        errorProvider.SetError(IdnumericUpDown,"Este campo debe ser cero");
+                        errorProvider.SetError(IdnumericUpDown,"Este campo debe ser cero para poder guardar un nuevo producto");
                     }
                     
                 }
