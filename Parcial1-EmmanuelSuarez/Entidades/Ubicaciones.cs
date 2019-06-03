@@ -14,7 +14,7 @@ namespace Parcial1_EmmanuelSuarez.Entidades
         public int UbicacionId { get; set; }
         public string Descripcion { get; set; }
 
-        Ubicaciones()
+        public Ubicaciones()
         {
             UbicacionId = 0;
             Descripcion = string.Empty;
