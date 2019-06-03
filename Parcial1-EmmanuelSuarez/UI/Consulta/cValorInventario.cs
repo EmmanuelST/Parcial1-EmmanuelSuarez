@@ -33,8 +33,19 @@ namespace Parcial1_EmmanuelSuarez.UI.Consulta
 
             try
             {
-                ValorTotalInventarioBLL.Actualizar();
-                valor = ValorTotalInventarioBLL.Buscar();
+                if(ValorTotalInventarioBLL.Buscar() != null)
+                {
+                    ValorTotalInventarioBLL.Actualizar();
+                    valor = ValorTotalInventarioBLL.Buscar();
+                }
+                else
+                {
+                    valor = new ValorTotalInventario() { ValorTotal = 0};
+                    ValorTotalInventarioBLL.Guardar(valor);
+                    ValorTotalInventarioBLL.Actualizar();
+                    valor = ValorTotalInventarioBLL.Buscar();
+                }
+                
             }
             catch(Exception)
             {
