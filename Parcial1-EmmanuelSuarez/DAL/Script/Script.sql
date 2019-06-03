@@ -28,4 +28,3 @@ CREATE TABLE ProductoModificacions(
 	Descripcion nvarchar(max) NULL,
 	FechaModificacion datetime NOT NULL
 )
-

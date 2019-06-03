@@ -59,6 +59,7 @@
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\ProductoModificacion.cs" />
     <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\Ubicaciones.cs" />
     <Compile Include="Entidades\ValorTotalInventario.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

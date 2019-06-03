@@ -13,6 +13,7 @@ namespace Parcial1_EmmanuelSuarez.DAL
         public DbSet<Productos> Producto { get; set; }
         public DbSet<ValorTotalInventario> ValorTotalInventario { get; set; }
         public DbSet<ProductoModificacion> ProductoModificacion { get; set; }
+        public DbSet<Ubicaciones> Ubicacione { get;set }
 
 
         public Contexto():base("Constr")
