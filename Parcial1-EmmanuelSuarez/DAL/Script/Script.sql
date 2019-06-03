@@ -28,3 +28,7 @@ CREATE TABLE ProductoModificacions(
 	Descripcion nvarchar(max) NULL,
 	FechaModificacion datetime NOT NULL
 )
+
+
+use master 
+drop database Parcial1_db

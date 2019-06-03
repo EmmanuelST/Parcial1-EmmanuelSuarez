@@ -70,7 +70,8 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             bool paso = true;
             errorProvider.Clear();
 
-            if(string.IsNullOrEmpty(DescripciontextBox.Text))
+            if(string.IsNullOrWhiteSpace(DescripciontextBox.Text))
+
             {
                 errorProvider.SetError(DescripciontextBox,"Este campo no puede estar vacio");
                 paso = false;

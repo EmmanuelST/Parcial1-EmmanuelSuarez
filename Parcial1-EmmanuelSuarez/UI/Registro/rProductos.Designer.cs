@@ -99,7 +99,7 @@
             0});
             this.ExistencianumericUpDown.Name = "ExistencianumericUpDown";
             this.ExistencianumericUpDown.Size = new System.Drawing.Size(156, 20);
-            this.ExistencianumericUpDown.TabIndex = 5;
+            this.ExistencianumericUpDown.TabIndex = 4;
             this.ExistencianumericUpDown.ValueChanged += new System.EventHandler(this.ExistencianumericUpDown_ValueChanged);
             // 
             // label3
@@ -122,7 +122,7 @@
             0});
             this.CostonumericUpDown.Name = "CostonumericUpDown";
             this.CostonumericUpDown.Size = new System.Drawing.Size(156, 20);
-            this.CostonumericUpDown.TabIndex = 7;
+            this.CostonumericUpDown.TabIndex = 5;
             this.CostonumericUpDown.ValueChanged += new System.EventHandler(this.CostonumericUpDown_ValueChanged);
             // 
             // label4
@@ -140,7 +140,7 @@
             this.ValorInventariotextBox.Name = "ValorInventariotextBox";
             this.ValorInventariotextBox.ReadOnly = true;
             this.ValorInventariotextBox.Size = new System.Drawing.Size(156, 20);
-            this.ValorInventariotextBox.TabIndex = 9;
+            this.ValorInventariotextBox.TabIndex = 13;
             this.ValorInventariotextBox.Text = "0.00";
             // 
             // label5
@@ -159,7 +159,7 @@
             this.Guardarbutton.Location = new System.Drawing.Point(15, 204);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 55);
-            this.Guardarbutton.TabIndex = 10;
+            this.Guardarbutton.TabIndex = 6;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             this.Nuevobutton.Location = new System.Drawing.Point(147, 204);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 55);
-            this.Nuevobutton.TabIndex = 11;
+            this.Nuevobutton.TabIndex = 7;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@
             this.Eliminarbutton.Location = new System.Drawing.Point(277, 204);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 55);
-            this.Eliminarbutton.TabIndex = 12;
+            this.Eliminarbutton.TabIndex = 8;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
@@ -198,7 +198,7 @@
             this.Buscarbutton.Location = new System.Drawing.Point(277, 14);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 31);
-            this.Buscarbutton.TabIndex = 13;
+            this.Buscarbutton.TabIndex = 2;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
@@ -232,7 +232,7 @@
             this.MaximumSize = new System.Drawing.Size(382, 308);
             this.MinimumSize = new System.Drawing.Size(382, 308);
             this.Name = "rProductos";
-            this.Text = "Registro de Producto";
+            this.Text = "2";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).EndInit();
