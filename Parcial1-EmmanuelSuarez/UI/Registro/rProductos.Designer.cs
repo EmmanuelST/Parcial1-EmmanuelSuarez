@@ -218,7 +218,7 @@
             // 
             this.Nuevobutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.nuevo_img;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(147, 236);
+            this.Nuevobutton.Location = new System.Drawing.Point(16, 236);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 55);
             this.Nuevobutton.TabIndex = 7;
@@ -231,7 +231,7 @@
             // 
             this.Guardarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.guardar_img__1_;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(15, 236);
+            this.Guardarbutton.Location = new System.Drawing.Point(147, 236);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 55);
             this.Guardarbutton.TabIndex = 6;
