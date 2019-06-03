@@ -40,11 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.ValorInventariotextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.UbicacioncomboBox = new System.Windows.Forms.ComboBox();
+            this.AgregarUbicacionbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).BeginInit();
@@ -91,7 +94,7 @@
             // 
             // ExistencianumericUpDown
             // 
-            this.ExistencianumericUpDown.Location = new System.Drawing.Point(115, 81);
+            this.ExistencianumericUpDown.Location = new System.Drawing.Point(115, 113);
             this.ExistencianumericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -105,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 83);
+            this.label3.Location = new System.Drawing.Point(13, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 4;
@@ -114,7 +117,7 @@
             // CostonumericUpDown
             // 
             this.CostonumericUpDown.DecimalPlaces = 2;
-            this.CostonumericUpDown.Location = new System.Drawing.Point(115, 118);
+            this.CostonumericUpDown.Location = new System.Drawing.Point(115, 150);
             this.CostonumericUpDown.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -128,7 +131,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 121);
+            this.label4.Location = new System.Drawing.Point(13, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 6;
@@ -136,7 +139,7 @@
             // 
             // ValorInventariotextBox
             // 
-            this.ValorInventariotextBox.Location = new System.Drawing.Point(115, 155);
+            this.ValorInventariotextBox.Location = new System.Drawing.Point(115, 187);
             this.ValorInventariotextBox.Name = "ValorInventariotextBox";
             this.ValorInventariotextBox.ReadOnly = true;
             this.ValorInventariotextBox.Size = new System.Drawing.Size(156, 20);
@@ -146,50 +149,44 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 159);
+            this.label5.Location = new System.Drawing.Point(12, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Valor en inventario:";
             // 
-            // Guardarbutton
+            // errorProvider
             // 
-            this.Guardarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.guardar_img__1_;
-            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(15, 204);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 55);
-            this.Guardarbutton.TabIndex = 6;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
-            // Nuevobutton
+            // label6
             // 
-            this.Nuevobutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.nuevo_img;
-            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(147, 204);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 55);
-            this.Nuevobutton.TabIndex = 7;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 82);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Ubicacion:";
             // 
-            // Eliminarbutton
+            // UbicacioncomboBox
             // 
-            this.Eliminarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.borrar_img;
-            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(277, 204);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 55);
-            this.Eliminarbutton.TabIndex = 8;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            this.UbicacioncomboBox.FormattingEnabled = true;
+            this.UbicacioncomboBox.Location = new System.Drawing.Point(115, 82);
+            this.UbicacioncomboBox.Name = "UbicacioncomboBox";
+            this.UbicacioncomboBox.Size = new System.Drawing.Size(156, 21);
+            this.UbicacioncomboBox.TabIndex = 15;
+            // 
+            // AgregarUbicacionbutton
+            // 
+            this.AgregarUbicacionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AgregarUbicacionbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.agregar2;
+            this.AgregarUbicacionbutton.Location = new System.Drawing.Point(277, 73);
+            this.AgregarUbicacionbutton.Name = "AgregarUbicacionbutton";
+            this.AgregarUbicacionbutton.Size = new System.Drawing.Size(39, 36);
+            this.AgregarUbicacionbutton.TabIndex = 16;
+            this.AgregarUbicacionbutton.UseVisualStyleBackColor = true;
+            this.AgregarUbicacionbutton.Click += new System.EventHandler(this.AgregarUbicacionbutton_Click);
             // 
             // Buscarbutton
             // 
@@ -204,16 +201,53 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // errorProvider
+            // Eliminarbutton
             // 
-            this.errorProvider.ContainerControl = this;
-            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
+            this.Eliminarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.borrar_img;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(277, 236);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 55);
+            this.Eliminarbutton.TabIndex = 8;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.nuevo_img;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(147, 236);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 55);
+            this.Nuevobutton.TabIndex = 7;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.guardar_img__1_;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(15, 236);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 55);
+            this.Guardarbutton.TabIndex = 6;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // rProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 269);
+            this.ClientSize = new System.Drawing.Size(362, 311);
+            this.Controls.Add(this.AgregarUbicacionbutton);
+            this.Controls.Add(this.UbicacioncomboBox);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -229,8 +263,6 @@
             this.Controls.Add(this.IdnumericUpDown);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(382, 308);
-            this.MinimumSize = new System.Drawing.Size(382, 308);
             this.Name = "rProductos";
             this.Text = "Registro de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
@@ -259,5 +291,8 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button AgregarUbicacionbutton;
+        private System.Windows.Forms.ComboBox UbicacioncomboBox;
+        private System.Windows.Forms.Label label6;
     }
 }

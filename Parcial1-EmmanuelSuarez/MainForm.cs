@@ -40,5 +40,12 @@ namespace Parcial1_EmmanuelSuarez
             modificacionProducto.MdiParent = this;
             modificacionProducto.Show();
         }
+
+        private void UbicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rUbicaciones rUbicacion = new rUbicaciones();
+            rUbicacion.MdiParent = this;
+            rUbicacion.Show();
+        }
     }
 }

@@ -33,11 +33,11 @@
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,11 @@
             // IdnumericUpDown
             // 
             this.IdnumericUpDown.Location = new System.Drawing.Point(84, 22);
+            this.IdnumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(133, 20);
             this.IdnumericUpDown.TabIndex = 1;
@@ -74,31 +79,9 @@
             this.DescripciontextBox.Size = new System.Drawing.Size(228, 20);
             this.DescripciontextBox.TabIndex = 3;
             // 
-            // Nuevobutton
+            // errorProvider
             // 
-            this.Nuevobutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.nuevo_img;
-            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(127, 82);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 62);
-            this.Nuevobutton.TabIndex = 5;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.borrar_img;
-            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(237, 82);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 62);
-            this.Eliminarbutton.TabIndex = 6;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            this.errorProvider.ContainerControl = this;
             // 
             // Buscarbutton
             // 
@@ -113,11 +96,37 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.borrar_img;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(237, 82);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 62);
+            this.Eliminarbutton.TabIndex = 6;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.nuevo_img;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 82);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 62);
+            this.Nuevobutton.TabIndex = 5;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::Parcial1_EmmanuelSuarez.Properties.Resources.guardar_img__1_;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(15, 82);
+            this.Guardarbutton.Location = new System.Drawing.Point(126, 82);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 62);
             this.Guardarbutton.TabIndex = 4;
@@ -125,10 +134,6 @@
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
-            // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
             // 
             // rUbicaciones
             // 

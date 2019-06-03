@@ -34,6 +34,7 @@
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valorTotalDeInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaciónDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ubicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productoToolStripMenuItem});
+            this.productoToolStripMenuItem,
+            this.ubicacionesToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Text = "&Registro";
@@ -75,7 +77,7 @@
             // valorTotalDeInventarioToolStripMenuItem
             // 
             this.valorTotalDeInventarioToolStripMenuItem.Name = "valorTotalDeInventarioToolStripMenuItem";
-            this.valorTotalDeInventarioToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.valorTotalDeInventarioToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.valorTotalDeInventarioToolStripMenuItem.Text = "Valor Total de Inventario";
             this.valorTotalDeInventarioToolStripMenuItem.Click += new System.EventHandler(this.ValorTotalDeInventarioToolStripMenuItem_Click);
             // 
@@ -85,6 +87,13 @@
             this.modificaciónDeProductosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.modificaciónDeProductosToolStripMenuItem.Text = "&Modificación de Productos";
             this.modificaciónDeProductosToolStripMenuItem.Click += new System.EventHandler(this.ModificaciónDeProductosToolStripMenuItem_Click);
+            // 
+            // ubicacionesToolStripMenuItem
+            // 
+            this.ubicacionesToolStripMenuItem.Name = "ubicacionesToolStripMenuItem";
+            this.ubicacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ubicacionesToolStripMenuItem.Text = "&Ubicaciones";
+            this.ubicacionesToolStripMenuItem.Click += new System.EventHandler(this.UbicacionesToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -111,6 +120,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem valorTotalDeInventarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificaciónDeProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ubicacionesToolStripMenuItem;
     }
 }
 

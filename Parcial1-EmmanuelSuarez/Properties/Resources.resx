@@ -121,19 +121,25 @@
   <data name="borrar_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrar_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recargar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\recargar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuevo_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuevo_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="guardar_img (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar_img (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buscar_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscar_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nuevo_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuevo_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="busqueda_pequeña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\busqueda_pequeña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="recargar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\recargar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

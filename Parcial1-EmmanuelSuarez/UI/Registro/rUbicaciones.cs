@@ -84,6 +84,26 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
         {
             bool paso = true;
 
+            try
+            {
+                List<Ubicaciones> lista = new List<Ubicaciones>();
+                lista = UbicacionesBLL.GetList(p => true);
+
+                foreach(var obj in lista)
+                {
+                    if(obj.Descripcion.Equals(DescripciontextBox.Text))
+                    {
+                        errorProvider.SetError(DescripciontextBox,"El nombre ya está registrado");
+                        paso = false;
+                        break;
+                    }
+                }
+
+            }catch(Exception)
+            {
+                MessageBox.Show("Hubo un error verificando");
+            }
+
             if(string.IsNullOrWhiteSpace(DescripciontextBox.Text))
             {
                 errorProvider.SetError(DescripciontextBox,"Este campo no puede estar vacio");

@@ -12,6 +12,7 @@ namespace Parcial1_EmmanuelSuarez.Entidades
     {
         [Key]
         public int UbicacionId { get; set; }
+        
         public string Descripcion { get; set; }
 
         public Ubicaciones()

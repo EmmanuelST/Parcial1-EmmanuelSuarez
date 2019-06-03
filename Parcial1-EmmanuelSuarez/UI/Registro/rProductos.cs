@@ -14,9 +14,33 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
 {
     public partial class rProductos : Form
     {
+        List<Ubicaciones> ubicaciones;
+
         public rProductos()
         {
             InitializeComponent();
+            LlenarUbicaciones();
+        }
+
+        private void LlenarUbicaciones()
+        {
+            try
+            {
+                ubicaciones = new List<Ubicaciones>();
+                ubicaciones = UbicacionesBLL.GetList(p => true);
+                UbicacioncomboBox.Items.Clear();
+
+                foreach(var obj in ubicaciones)
+                {
+                    UbicacioncomboBox.Items.Add(obj.Descripcion);
+                }
+                
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Hubo un erro obteniendo las ubicaciones");
+            }
+            
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
@@ -180,6 +204,13 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
         private void CostonumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             ValorInventariotextBox.Text = ValorInventario().ToString();
+        }
+
+        private void AgregarUbicacionbutton_Click(object sender, EventArgs e)
+        {
+            rUbicaciones rUbicacion = new rUbicaciones();
+            rUbicacion.ShowDialog();
+            LlenarUbicaciones();
         }
     }
 }
