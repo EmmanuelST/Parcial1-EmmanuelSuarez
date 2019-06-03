@@ -29,6 +29,3 @@ CREATE TABLE ProductoModificacions(
 	FechaModificacion datetime NOT NULL
 )
 
-
-use master 
-drop database Parcial1_db

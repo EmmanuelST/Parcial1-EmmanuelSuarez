@@ -71,7 +71,6 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             errorProvider.Clear();
 
             if(string.IsNullOrWhiteSpace(DescripciontextBox.Text))
-
             {
                 errorProvider.SetError(DescripciontextBox,"Este campo no puede estar vacio");
                 paso = false;
@@ -95,7 +94,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
         private Productos LlenarClase()
         {
             Productos producto = new Productos();
-
+            DescripciontextBox.Text = DescripciontextBox.Text.Trim();
             producto.ProductoId = (int)IdnumericUpDown.Value;
             producto.Descripcion = DescripciontextBox.Text;
             producto.Existencia = (int)ExistencianumericUpDown.Value;
