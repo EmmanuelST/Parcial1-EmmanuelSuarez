@@ -148,7 +148,7 @@
             this.Controls.Add(this.DesdedateTimePicker);
             this.Controls.Add(this.label1);
             this.Name = "cModificacionProducto";
-            this.Text = "cModificacionProducto";
+            this.Text = "Registro de modificacion del productos";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

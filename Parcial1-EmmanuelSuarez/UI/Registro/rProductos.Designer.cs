@@ -232,7 +232,7 @@
             this.MaximumSize = new System.Drawing.Size(382, 308);
             this.MinimumSize = new System.Drawing.Size(382, 308);
             this.Name = "rProductos";
-            this.Text = "2";
+            this.Text = "Registro de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).EndInit();
