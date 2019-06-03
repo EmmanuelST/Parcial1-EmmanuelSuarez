@@ -229,6 +229,8 @@
             this.Controls.Add(this.IdnumericUpDown);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(382, 308);
+            this.MinimumSize = new System.Drawing.Size(382, 308);
             this.Name = "rProductos";
             this.Text = "Registro de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
