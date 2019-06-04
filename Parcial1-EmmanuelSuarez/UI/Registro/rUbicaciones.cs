@@ -41,6 +41,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                     {
                         UbicacionesBLL.Guardar(ubicacion);
                         MessageBox.Show("Guardaro exitosamente");
+                        this.Dispose();
                     }
                     else
                     {
@@ -86,17 +87,11 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
 
             try
             {
-                List<Ubicaciones> lista = new List<Ubicaciones>();
-                lista = UbicacionesBLL.GetList(p => true);
-
-                foreach(var obj in lista)
+              
+                if(UbicacionesBLL.NoDuplicado(DescripciontextBox.Text))
                 {
-                    if(obj.Descripcion.Equals(DescripciontextBox.Text))
-                    {
-                        errorProvider.SetError(DescripciontextBox,"El nombre ya está registrado");
-                        paso = false;
-                        break;
-                    }
+                    paso = false;
+                    errorProvider.SetError(DescripciontextBox, "El nombre ya está registrado");
                 }
 
             }catch(Exception)

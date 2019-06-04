@@ -28,13 +28,11 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             {
                 ubicaciones = new List<Ubicaciones>();
                 ubicaciones = UbicacionesBLL.GetList(p => true);
-                UbicacioncomboBox.Items.Clear();
 
-                foreach(var obj in ubicaciones)
-                {
-                    UbicacioncomboBox.Items.Add(obj.Descripcion);
-                }
-                
+                UbicacioncomboBox.DataSource = ubicaciones;
+                UbicacioncomboBox.ValueMember = "UbicacionId";
+                UbicacioncomboBox.DisplayMember = "Descripcion";
+  
             }
             catch(Exception)
             {

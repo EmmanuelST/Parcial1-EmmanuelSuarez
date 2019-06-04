@@ -123,5 +123,25 @@ namespace Parcial1_EmmanuelSuarez.BLL
 
             return lista;
         }
+        
+        public static bool NoDuplicado(string descripcion)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+            try
+            {
+                if(db.Ubicacion.Any(p=> p.Descripcion.Equals(descripcion)))
+                {
+                    paso = true;
+                }
+            }catch(Exception)
+            {
+                throw;
+            }
+
+
+
+            return paso;
+        }
     }
 }
