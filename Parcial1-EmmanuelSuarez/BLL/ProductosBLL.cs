@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1_EmmanuelSuarez.BLL
 {
-    public class ProductoBLL
+    public class ProductosBLL
     {
 
         public static bool Guardar(Productos producto)

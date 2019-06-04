@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ProductoBLL.cs" />
+    <Compile Include="BLL\ProductosBLL.cs" />
     <Compile Include="BLL\ProductoModificacionBLL.cs" />
     <Compile Include="BLL\UbicacionesBLL.cs" />
-    <Compile Include="BLL\ValorTotalInventarioBLL.cs" />
+    <Compile Include="BLL\ValorTotalInventariosBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\ProductoModificaciones.cs" />
     <Compile Include="Entidades\Productos.cs" />

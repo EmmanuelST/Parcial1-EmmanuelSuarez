@@ -16,26 +16,26 @@ namespace Parcial1_EmmanuelSuarez.BLL.Tests
         public void GuardarTest()
         {
             Productos produto = new Productos() { Descripcion = "ColcaCola2", Costo = 500, Existencia = 5 };
-            Assert.IsTrue(ProductoBLL.Guardar(produto));
+            Assert.IsTrue(ProductosBLL.Guardar(produto));
         }
 
         [TestMethod()]
         public void ModificarTest()
         {
             Productos produto = new Productos() {ProductoId = 4, Descripcion = "ColcaCola5", Costo = 500, Existencia = 5 };
-            Assert.IsTrue(ProductoBLL.Modificar(produto));
+            Assert.IsTrue(ProductosBLL.Modificar(produto));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.IsNotNull(ProductoBLL.Buscar(3));
+            Assert.IsNotNull(ProductosBLL.Buscar(3));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.IsTrue(ProductoBLL.Eliminar(3));
+            Assert.IsTrue(ProductosBLL.Eliminar(3));
         }
     }
 }

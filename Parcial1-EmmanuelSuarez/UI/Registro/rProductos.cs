@@ -52,9 +52,9 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
 
             try
             {
-                if (ProductoBLL.Exist((int)IdnumericUpDown.Value))
+                if (ProductosBLL.Exist((int)IdnumericUpDown.Value))
                 {
-                    ProductoBLL.Modificar(producto);
+                    ProductosBLL.Modificar(producto);
                
                     ProductoModificacionBLL.Guardar(new ProductoModificaciones()
                     { ProductoId = producto.ProductoId,Descripcion = producto.Descripcion, FechaModificacion = DateTime.Now });
@@ -66,7 +66,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                 {
                     if(IdnumericUpDown.Value == 0)
                     {
-                        ProductoBLL.Guardar(producto);
+                        ProductosBLL.Guardar(producto);
                         MessageBox.Show("Guardado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
                     }
@@ -150,9 +150,9 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
         {
             try
             {
-                if (ProductoBLL.Exist((int)IdnumericUpDown.Value))
+                if (ProductosBLL.Exist((int)IdnumericUpDown.Value))
                 {
-                    LlenarFormulario(ProductoBLL.Buscar((int)IdnumericUpDown.Value));
+                    LlenarFormulario(ProductosBLL.Buscar((int)IdnumericUpDown.Value));
                 }else
                 {
                     MessageBox.Show("No se encontro el producto", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -173,7 +173,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             {
                 if(IdnumericUpDown.Value > 0)
                 {
-                    ProductoBLL.Eliminar((int)IdnumericUpDown.Value);
+                    ProductosBLL.Eliminar((int)IdnumericUpDown.Value);
                     MessageBox.Show("Eliminado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }else
                 {

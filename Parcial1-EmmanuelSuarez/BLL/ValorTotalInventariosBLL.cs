@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1_EmmanuelSuarez.BLL
 {
-    class ValorTotalInventarioBLL
+    class ValorTotalInventariosBLL
     {
         
 
@@ -106,7 +106,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
 
             try
             {
-                lista = ProductoBLL.GetList(p => true);
+                lista = ProductosBLL.GetList(p => true);
                 decimal total = 0;
 
                 foreach (var obj in lista)
@@ -114,7 +114,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
                     total += obj.ValorInventario;
                 }
 
-                ValorTotalInventarioBLL.ModificarValor(total);
+                ValorTotalInventariosBLL.ModificarValor(total);
 
             }
             catch (Exception)
