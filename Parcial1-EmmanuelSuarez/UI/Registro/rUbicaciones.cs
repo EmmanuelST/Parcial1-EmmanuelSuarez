@@ -88,7 +88,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
             try
             {
               
-                if(UbicacionesBLL.NoDuplicado(DescripciontextBox.Text))
+                if(UbicacionesBLL.Duplicado(DescripciontextBox.Text))
                 {
                     paso = false;
                     errorProvider.SetError(DescripciontextBox, "El nombre ya está registrado");

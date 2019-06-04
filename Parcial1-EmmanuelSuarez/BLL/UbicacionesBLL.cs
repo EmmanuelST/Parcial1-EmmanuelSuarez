@@ -124,7 +124,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
             return lista;
         }
         
-        public static bool NoDuplicado(string descripcion)
+        public static bool Duplicado(string descripcion)
         {
             bool paso = false;
             Contexto db = new Contexto();
