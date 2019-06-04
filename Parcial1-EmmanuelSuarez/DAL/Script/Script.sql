@@ -22,9 +22,15 @@ CREATE TABLE ValorTotalInventarios
 )
 GO
 
-CREATE TABLE ProductoModificacions(
+CREATE TABLE ProductoModificaciones(
 	ModificacionId int PRIMARY KEY IDENTITY(1,1) NOT NULL,
 	ProductoId int NOT NULL,
 	Descripcion nvarchar(max) NULL,
 	FechaModificacion datetime NOT NULL
+)
+
+CREATE TABLE Ubicaciones
+(
+	UbicacionId int PRIMARY KEY IDENTITY,
+	Descripcion nvarchar(max)
 )

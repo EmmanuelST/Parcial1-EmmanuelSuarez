@@ -21,7 +21,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Consulta
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            var lista = new List<ProductoModificacion>();
+            var lista = new List<ProductoModificaciones>();
 
             if(CriteriotextBox.Text.Trim().Length > 0)
             {

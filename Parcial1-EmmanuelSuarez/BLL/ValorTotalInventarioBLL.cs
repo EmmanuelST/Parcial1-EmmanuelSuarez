@@ -15,11 +15,11 @@ namespace Parcial1_EmmanuelSuarez.BLL
     {
         
 
-        public static ValorTotalInventario Buscar()
+        public static ValorTotalInventarios Buscar()
         {
            
             Contexto db = new Contexto();
-            ValorTotalInventario valor = new ValorTotalInventario();
+            ValorTotalInventarios valor = new ValorTotalInventarios();
 
             try
             {
@@ -36,7 +36,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
             return valor;
         }
 
-        public static bool Guardar(ValorTotalInventario valor)
+        public static bool Guardar(ValorTotalInventarios valor)
         {
             Contexto db = new Contexto();
             bool paso = false;
@@ -61,7 +61,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
         public static void ModificarValor(decimal total)
         {
             
-            ValorTotalInventario valor = new ValorTotalInventario()
+            ValorTotalInventarios valor = new ValorTotalInventarios()
             { ValorInventarioId = 1,ValorTotal = total };
 
             Contexto db = new Contexto();
@@ -81,9 +81,9 @@ namespace Parcial1_EmmanuelSuarez.BLL
             }
 
         }
-        public static List<ValorTotalInventario> GetList(Expression<Func<ValorTotalInventario, bool>> valor)
+        public static List<ValorTotalInventarios> GetList(Expression<Func<ValorTotalInventarios, bool>> valor)
         {
-            List<ValorTotalInventario> Lista = new List<ValorTotalInventario>();
+            List<ValorTotalInventarios> Lista = new List<ValorTotalInventarios>();
             Contexto db = new Contexto();
             try
             {

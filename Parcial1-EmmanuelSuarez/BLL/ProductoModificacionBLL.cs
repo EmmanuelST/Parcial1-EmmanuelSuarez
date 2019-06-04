@@ -12,7 +12,7 @@ namespace Parcial1_EmmanuelSuarez.BLL
     class ProductoModificacionBLL
     {
 
-        public static bool Guardar(ProductoModificacion producto)
+        public static bool Guardar(ProductoModificaciones producto)
         {
             bool paso = false;
             Contexto db = new Contexto();
@@ -35,9 +35,9 @@ namespace Parcial1_EmmanuelSuarez.BLL
             return paso;
         }
 
-        public static List<ProductoModificacion> GetList(Expression<Func<ProductoModificacion, bool>> producto)
+        public static List<ProductoModificaciones> GetList(Expression<Func<ProductoModificaciones, bool>> producto)
         {
-            List<ProductoModificacion> Lista = new List<ProductoModificacion>();
+            List<ProductoModificaciones> Lista = new List<ProductoModificaciones>();
             Contexto db = new Contexto();
             try
             {

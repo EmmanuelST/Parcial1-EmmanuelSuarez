@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Parcial1_EmmanuelSuarez.Entidades
 {
-    class ValorTotalInventario
+    class ValorTotalInventarios
     {
         [Key]
         public int ValorInventarioId { get; set; }
         public decimal ValorTotal { get; set; }
 
-        public ValorTotalInventario()
+        public ValorTotalInventarios()
         {
             ValorInventarioId = 0;
             ValorTotal = 0;

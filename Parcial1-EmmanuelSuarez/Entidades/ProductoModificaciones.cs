@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1_EmmanuelSuarez.Entidades
 {
-    class ProductoModificacion
+    class ProductoModificaciones
     {
         [Key]
         public int ModificacionId { get; set; }
@@ -15,7 +15,7 @@ namespace Parcial1_EmmanuelSuarez.Entidades
         public string Descripcion { get; set; }
         public DateTime FechaModificacion { get; set; }
 
-        public ProductoModificacion()
+        public ProductoModificaciones()
         {
             ModificacionId = 0;
             ProductoId = 0;

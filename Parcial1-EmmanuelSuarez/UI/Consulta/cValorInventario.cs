@@ -29,7 +29,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Consulta
 
         private void ObtenerTotal()
         {
-            ValorTotalInventario valor = new ValorTotalInventario();
+            ValorTotalInventarios valor = new ValorTotalInventarios();
 
             try
             {
@@ -40,7 +40,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Consulta
                 }
                 else
                 {
-                    valor = new ValorTotalInventario() { ValorTotal = 0};
+                    valor = new ValorTotalInventarios() { ValorTotal = 0};
                     ValorTotalInventarioBLL.Guardar(valor);
                     ValorTotalInventarioBLL.Actualizar();
                     valor = ValorTotalInventarioBLL.Buscar();

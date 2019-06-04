@@ -56,7 +56,7 @@ namespace Parcial1_EmmanuelSuarez.UI.Registro
                 {
                     ProductoBLL.Modificar(producto);
                
-                    ProductoModificacionBLL.Guardar(new ProductoModificacion()
+                    ProductoModificacionBLL.Guardar(new ProductoModificaciones()
                     { ProductoId = producto.ProductoId,Descripcion = producto.Descripcion, FechaModificacion = DateTime.Now });
 
                     MessageBox.Show("Modificado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
